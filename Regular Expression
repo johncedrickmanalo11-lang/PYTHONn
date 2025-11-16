@@ -1,0 +1,11 @@
+import re
+
+text = "My phone number is 123-456-7890"
+pattern = r"\d{3}-\d{3}-\d{4}"
+
+match = re.search(pattern, text)
+print(match.group())
+
+emails = re.findall(r"[A-Za-z0-9._]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", 
+                    "Email me at test@example.com or hello@mail.com")
+print(emails)
